@@ -71,15 +71,15 @@ Model saved at weights/knn-kr13v.pkl
 
 ## Prediction class for (2.3,9.1)
 
-![Figure_2.3_9.1_pred.png](figures/Figure_2.3_9.1_pred.png)
+![Figure_pred_2.3_9.1.png](figures/Figure_pred_2.3_9.1.png)
 
 ## Prediction class for (9.3,10.2)
 
-![Figure_9.3_10.2_pred.png](figures/Figure_9.3_10.2_pred.png)
+![Figure_pred_9.3_10.2.png](figures/Figure_pred_9.3_10.2.png)
 
 ## Prediction class for (9.7,8.1)
 
-![Figure_9.7_8.1_pred.png](figures/Figure_9.7_8.1_pred.png)
+![Figure_pred_9.7_8.1.png](figures/Figure_pred_9.7_8.1.png)
 
 # Load the trained model
 
