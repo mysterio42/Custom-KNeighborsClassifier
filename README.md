@@ -90,7 +90,9 @@ python run.py --load yes --gen no
 
 # Docker for the model
 
-You can build Docker image by following:
+## Build the Docker image
+
+You can build docker image by following:
 
 ```shell 
 docker-compose build
