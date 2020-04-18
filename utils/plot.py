@@ -9,6 +9,9 @@ overlap = tuple(name for name in mcd.CSS4_COLORS
 
 FIGURES_DIR = 'figures/'
 
+plt.rcParams['figure.figsize'] = (13.66,6.79)
+plt.rcParams['figure.dpi'] = 100
+plt.rcParams['savefig.dpi'] = 100
 
 def gen_colors(cluster_len):
     colors = []
@@ -20,6 +23,8 @@ def gen_colors(cluster_len):
 
 
 def plot_data(df, colors):
+
+
     labels = list(df['labels'].unique())
 
     for label in labels:
@@ -29,13 +34,19 @@ def plot_data(df, colors):
     for i, row in df.iterrows():
         plt.annotate(str(int(row['labels'])), (row['x'], row['y']))
 
+
+
     plt.axis([-0.5, 18, -0.5, 18])
     plt.title('Fake Generated Clusters for KNeighborsClassifier model')
+
+
     plt.savefig(FIGURES_DIR + 'Figure_data' + '.png')
     plt.show()
 
 
 def plot_prediction(model, df, point: tuple, colors):
+
+
     labels = list(df['labels'].unique())
 
     for label in labels:
@@ -59,18 +70,26 @@ def plot_prediction(model, df, point: tuple, colors):
 
 
 def plot_cm(cm):
+
+
     sns.heatmap(cm / np.sum(cm), annot=True, fmt='.2%', cmap='Blues')
     plt.title('Confusion Matrix')
+
+
     plt.savefig(FIGURES_DIR+'Figure_cm'+'.png')
     plt.show()
 
 
 def plot_optimal_k(k_range, scores, opt_k, opt_score):
+    manager = plt.get_current_fig_manager()
+    manager.resize(*manager.window.maxsize())
+
     fig, ax = plt.subplots()
     ax.plot(k_range, scores)
     ax.plot(opt_k, opt_score, 'ro', color='green', markersize=10)
     ax.annotate('   optimal k', (opt_k, opt_score))
     ax.set(xlabel='Possible K neighbour', ylabel='Accuracy',
            title=f'Optimal K: {opt_k} Optimal Score: {opt_score}')
+
     plt.savefig(FIGURES_DIR + 'Figure_opt_k'+'.png')
     plt.show()
