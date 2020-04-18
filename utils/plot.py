@@ -29,7 +29,7 @@ def plot_data(df, colors):
     for i, row in df.iterrows():
         plt.annotate(str(int(row['labels'])), (row['x'], row['y']))
 
-    plt.axis([-0.5, 15, -0.5, 15])
+    plt.axis([-0.5, 18, -0.5, 18])
     plt.title('Fake Generated Clusters for KNeighborsClassifier model')
     plt.savefig(FIGURES_DIR + 'Figure_data' + '.png')
     plt.show()
@@ -45,7 +45,7 @@ def plot_prediction(model, df, point: tuple, colors):
     for i, row in df.iterrows():
         plt.annotate(str(int(row['labels'])), (row['x'], row['y']))
 
-    plt.axis([-0.5, 15, -0.5, 15])
+    plt.axis([-0.5, 18, -0.5, 18])
     x, y = point[0], point[1]
 
     plt.plot(x, y, 'ro', marker='*', markersize=20)
