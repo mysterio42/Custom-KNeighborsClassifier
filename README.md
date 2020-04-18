@@ -92,7 +92,7 @@ python run.py --load yes --gen no
 
 You can build Docker image by following:
 
-```shell script
+```shell 
 docker-compose build
 ```
 
@@ -100,6 +100,6 @@ docker-compose build
 
 You can launch a container from the Docker image by following:
 
-```shell script
+```shell
 docker-compose up
 ```
